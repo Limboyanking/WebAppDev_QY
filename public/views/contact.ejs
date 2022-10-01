@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include('partials/head.ejs') %>
+
+  <body>
+    <div class="backdrop"></div>
+
+    <%-include('partials/header.ejs') %> <%-include('partials/navigation.ejs')%>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-container">
+          <div class="paragraph">
+            <p>Got an interesting project? I can help you.</p>
+          </div>
+
+          <hr />
+
+          <div class="connect">
+            <p class="first">connect with me</p>
+            <p>https://instagram.com/limbo_yanking?r=nametag</p>
+          </div>
+
+          <div class="follow">
+            <p class="first">follow me</p>
+            <ul>
+              <li><span class="gh"></span> <a href="#">gh</a></li>
+              <li><span class="me"></span> <a href="#">me</a></li>
+              <li><span class="li"></span> <a href="#">li</a></li>
+              <li><span class="tw"></span> <a href="#">tw</a></li>
+            </ul>
+          </div>
+
+          <div class="hello">
+            <p class="first">say hello</p>
+            <div class="email">yanking3156@gmail.com</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const sideDrawer = document.querySelector(".mobile-nav");
+      const backdrop = document.querySelector(".backdrop");
+
+      function backdropClickHandler() {
+        btn.classList.remove("active");
+        backdrop.classList.toggle("blur");
+        sideDrawer.classList.remove("open");
+      }
+
+      btn.addEventListener("click", () => {
+        console.log("clicked");
+        btn.classList.toggle("active");
+        // backdrop.style.display = "block";
+        backdrop.classList.toggle("blur");
+        sideDrawer.classList.toggle("open");
+      });
+
+      backdrop.addEventListener("click", backdropClickHandler);
+    </script>
+  </body>
+</html>

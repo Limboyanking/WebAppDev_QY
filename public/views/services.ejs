@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include('partials/head.ejs') %>
+
+  <body>
+    <div class="backdrop"></div>
+
+    <%-include('partials/header.ejs') %> <%-include('partials/navigation.ejs')%>
+
+    <section class="services">
+      <div class="container">
+        <div class="title-container scroll-in js-opacity scrolled">
+          <h2 class="section-title">
+            Featured Services <span class="title-icon">🗒</span>
+          </h2>
+          <p class="section-subtitle">
+            I like several languages above JVM, DBs, and message queues, 
+            would like to understand new concept along with the new tools or technologies.
+            Here are things I've tasted:
+          </p>
+        </div>
+        <div class="services-container">
+
+          <div class="service-card">
+            <div class="service scroll-in js-opacity scrolled">
+              <div class="service-image">
+                <a
+                  href="https://www.databricks.com/glossary/what-is-spark-streaming#:~:text=Spark%20Streaming%20is%20an%20extension,%2C%20databases%2C%20and%20live%20dashboards."
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="/img/services/spark_streaming_logo.png"
+                    alt="Spark Streaming"
+                  />
+                </a>
+              </div>
+              <div class="service-content">
+                <div class="service-site">
+                  MEDIUM
+                </div>
+                <h3 class="service-title">
+                  <a
+                    href="https://www.databricks.com/glossary/what-is-spark-streaming#:~:text=Spark%20Streaming%20is%20an%20extension,%2C%20databases%2C%20and%20live%20dashboards."
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Spark Streaming
+                  </a>
+                </h3>
+                <div class="service-description">
+                  <p>
+                    Able to analyse and apply the mesh of realtime data stream and bussiness rules
+                    by either spark streaming SQL or regular spark packages.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service scroll-in js-opacity scrolled">
+              <div class="service-image">
+                <a
+                  href="https://www.playframework.com/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="/img/services/play-akka.png"
+                    alt="play-akka"
+                  />
+                </a>
+              </div>
+              <div class="service-content">
+                <div class="service-site">
+                  SUB-INTERMEDATE 
+                </div>
+                <h3 class="service-title">
+                  <a
+                    href="https://www.playframework.com/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Play and Akka
+                  </a>
+                </h3>
+                <div class="service-description">
+                  <p>
+                    Able to apply and organise web logic conveniently 
+                    in a combination of functional and object-oriented style. 
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service scroll-in js-opacity scrolled">
+              <div class="service-image">
+                <a
+                  href="https://hbase.apache.org/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img
+                    src="/img/services/hbase-logo.png"
+                    alt="hbase-logo"
+                  />
+                </a>
+              </div>
+              <div class="service-content">
+                <div class="service-site">
+                  SUB-INTERMEDATE
+                </div>
+                <h3 class="service-title">
+                  <a
+                    href="https://hbase.apache.org/" 
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    HBase
+                  </a>
+                </h3>
+                <div class="service-description">
+                  <p>
+                    Able to design and apply logic under NoSQL context.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <div class="wave-border">
+      <svg
+        viewBox="0 0 500 150"
+        preserveAspectRatio="none"
+        style="height: 100%; width: 100%"
+      >
+        <path
+          d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+          style="stroke: none; fill: var(--shade-100)"
+        ></path>
+        <path
+          class="neon-path"
+          d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98"
+          style="stroke: var(--neon-color); fill: none"
+        ></path>
+      </svg>
+    </div>
+
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const sideDrawer = document.querySelector(".mobile-nav");
+      const backdrop = document.querySelector(".backdrop");
+
+      function backdropClickHandler() {
+        btn.classList.remove("active");
+        backdrop.classList.toggle("blur");
+        sideDrawer.classList.remove("open");
+      }
+
+      btn.addEventListener("click", () => {
+        console.log("clicked");
+        btn.classList.toggle("active");
+        // backdrop.style.display = "block";
+        backdrop.classList.toggle("blur");
+        sideDrawer.classList.toggle("open");
+      });
+
+      backdrop.addEventListener("click", backdropClickHandler);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include('partials/head.ejs') %>
+
+  <body>
+    <div class="backdrop"></div>
+
+    <%-include('partials/header.ejs') %> <%-include('partials/navigation.ejs')%>
+
+    <section id="about" class="ogg-container">
+      <div class="ogg">
+        <p>Hello</p>
+        <p>I'm Qi</p>
+        <p>Yang</p>
+      </div>
+
+      <section class="intro_section">
+        <div class="intro_subtitle">
+          <p class="first-para">
+            I’m an enthusiastic Scala Developer and life-long
+            learner from Mainland China.
+          </p>
+          <p class="second-para">
+            I've been
+            <span class="highlight">writing scala since 2018</span>
+            with a focus on software design, distributed system and computing.
+          </p>
+          <p class="third-para">
+            I am a
+            <span class="highlight">student and a trader</span>
+            during the day and a spare time
+            <span class="highlight">programmer</span> every other time.
+            You can always catch me either talking trading or building with
+            programming.
+          </p>
+        </div>
+
+        <div class="project-links center og">
+          <a href="/img/Profile.pdf" target="_blank" class="link-btn"
+            >more about me</a
+          >
+        </div>
+      </section>
+    </section>
+
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const sideDrawer = document.querySelector(".mobile-nav");
+      const backdrop = document.querySelector(".backdrop");
+
+      function backdropClickHandler() {
+        btn.classList.remove("active");
+        backdrop.classList.toggle("blur");
+        sideDrawer.classList.remove("open");
+      }
+
+      btn.addEventListener("click", () => {
+        console.log("clicked");
+        btn.classList.toggle("active");
+        // backdrop.style.display = "block";
+        backdrop.classList.toggle("blur");
+        sideDrawer.classList.toggle("open");
+      });
+
+      backdrop.addEventListener("click", backdropClickHandler);
+    </script>
+  </body>
+</html>
