@@ -100,7 +100,7 @@ t1.fromTo(
   8
 );
 
-// TOBI
+// Qi
 
 t1.fromTo(
   ".landing section .content .theme h1 .wrap",
