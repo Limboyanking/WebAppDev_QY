@@ -1,3 +1,9 @@
+/**
+ * Name: Qi Yang  
+ * StudentID: 301313468     
+ * Date: 2022/10/1
+ */
+
 let cursor = document.querySelector(".cursor");
 let cursor2 = document.querySelector(".cursor2");
 

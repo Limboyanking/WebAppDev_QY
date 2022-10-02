@@ -1,3 +1,9 @@
+/**
+ * Name: Qi Yang  
+ * StudentID: 301313468     
+ * Date: 2022/10/1
+ */
+
 const express = require("express");
 const ejs = require("ejs");
 const path = require("path");
@@ -14,7 +20,6 @@ app.use(express.static("public"));
 // app.get("/public", express.static("public"));
 
 app.use("/", router);
-
 
 
 app.use((req, res) => {
