@@ -21,14 +21,6 @@
  var db = dbConfig();
  var port = normalizePort(process.env.PORT || '3000');
  app.set('port', port);
- 
-// app.use((req, res) => {
-//   res.status(404).render("404", { pageTitle: "Page not found" });
-// });
-
-// app.listen(app.get("port"), () => {
-//   console.log("Server is listening on " + PORT);
-// });
 
 
  /**

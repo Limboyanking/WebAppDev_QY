@@ -12,7 +12,7 @@ module.exports.businessContactList = function(req, res, next) {
         // console.log(businessContactList);
         if(err)
         {
-            return console.error(err);
+            console.error(err);
         }
         else
         {
@@ -65,7 +65,7 @@ module.exports.processEditPage = (req, res, next) => {
         if(err)
         {
             console.log(err);
-            res.end(err);
+            return res.end(err);
         }
         else
         {
@@ -87,7 +87,7 @@ module.exports.performDelete = (req, res, next) => {
         if(err)
         {
             console.log(err);
-            res.end(err);
+            return res.end(err);
         }
         else
         {
@@ -124,7 +124,7 @@ module.exports.processAddPage = (req, res, next) => {
         if(err)
         {
             console.log(err);
-            res.end(err);
+            return res.end(err);
         }
         else
         {
