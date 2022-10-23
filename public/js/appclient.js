@@ -2,11 +2,16 @@
  * Name: Qi Yang  
  * StudentID: 301313468     
  * Date: 2022/10/22
+ * 
+ * 
+ * 
  */
+
 
 console.log("it goes to the client-side.");
 
-if(getTitle == "businessContact List")
+//In control of client side double confirm
+if(getTitle == "BusinessContact List")
 {
     let deleteButtons = document.querySelectorAll('.btn-danger');
         

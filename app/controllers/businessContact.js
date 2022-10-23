@@ -9,7 +9,7 @@ let businessContactModel = require('../models/businessContact');
 
 module.exports.businessContactList = function(req, res, next) {  
     businessContactModel.find((err, businessContactList) => {
-        console.log(businessContactList);
+        // console.log(businessContactList);
         if(err)
         {
             return console.error(err);
@@ -17,10 +17,10 @@ module.exports.businessContactList = function(req, res, next) {
         else
         {
             res.render('businessContact/list', {
-                title: 'businessContact List', 
-                businessContactList: businessContactList,
-                userName: req.user ? req.user.username : ''
-            })            
+               title: 'BusinessContact List', 
+               businessContactList: businessContactList,
+               userName: req.user ? req.user.username : ''
+             })            
         }
     });
 }
@@ -39,7 +39,7 @@ module.exports.displayEditPage = (req, res, next) => {
         {
             //show the edit view
             res.render('businessContact/add_edit', {
-                title: 'Edit Item', 
+                title: 'Edit Contact', 
                 item: itemToEdit,
                 userName: req.user ? req.user.username : ''
             })
@@ -70,7 +70,7 @@ module.exports.processEditPage = (req, res, next) => {
         else
         {
             // console.log(req.body);
-            // refresh the book list
+            // refresh the list
             res.redirect('/businessContact/list');
         }
     });
@@ -91,7 +91,7 @@ module.exports.performDelete = (req, res, next) => {
         }
         else
         {
-            // refresh the book list
+            // refresh the list
             res.redirect('/businessContact/list');
         }
     });

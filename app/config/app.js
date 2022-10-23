@@ -40,6 +40,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../public')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
+// app.use('/css',express.static(path.join(__dirname, '../../public/css')));
+// app.use('/img',express.static(path.join(__dirname, '../../public/img')));
+
+
 
 // Sets up passport
 app.use(flash());
