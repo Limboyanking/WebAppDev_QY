@@ -1,0 +1,157 @@
+<!--
+ Name: Qi Yang  
+ StudentID: 301313468     
+ Date: 2022/10/22
+
+-->
+
+<nav class="mobile-nav">
+  <ul class="mobile-nav__item-list">
+    <li class="mobile-nav__item">
+      <a class="<%= path === '/home' ? 'active' : '' %>" href="/home"> 
+        Home 
+      </a>
+    </li>
+    <li class="mobile-nav__item">
+      <a class="<%= path === '/about' ? 'active' : '' %>" href="/about">
+        About
+      </a>
+    </li>
+    <li class="mobile-nav__item">
+      <a class="<%= path === '/projects' ? 'active' : '' %>" href="/projects">
+        Projects
+      </a>
+    </li>
+    <li class="mobile-nav__item">
+      <a class="<%= path === '/services' ? 'active' : '' %>" href="/services">
+        Services
+      </a>
+    </li>
+    <li class="mobile-nav__item">
+      <a class="<%= path === '/contact ' ? 'active' : '' %>" href="/contact">
+        Contact
+      </a>
+    </li>
+    <li class="mobile-nav__item">
+      <a class="<%= path === '/businessContact/list ' ? 'active' : '' %>" href="/businessContact/list">
+        businessContact
+      </a>
+    </li>
+
+    <li class="mobile-nav__item">
+      <a class="<%= path === '/users ' ? 'active' : '' %>" href="/users">
+        Users
+      </a>
+    </li>
+
+    <li class="mobile-nav__item">
+      <a class="<%= path === '/users/login ' ? 'active' : '' %>" href="/users/login">
+        login
+      </a>
+    </li>
+
+
+    <!-- <div class="cursor nav"></div>
+    <div class="cursor2 nav"></div> -->
+
+    <div>
+      <ul class="my-icons">
+        <li>
+          <a href="#">
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <ion-icon name="logo-codepen"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <ion-icon name="logo-medium"></ion-icon>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </ul>
+
+  <div class="cursor"></div>
+  <div class="cursor2"></div>
+</nav>
+
+<style>
+  .mobile-nav__item a {
+    position: relative;
+    text-align: center;
+    color: var(--text-color);
+  }
+
+  .mobile-nav__item a:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    background-color: var(--main-color);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    max-width: 0;
+    transition: max-width 500ms;
+  }
+
+  .mobile-nav__item a:hover,
+  .mobile-nav__item a:focus {
+    outline: none;
+  }
+
+  .mobile-nav__item a:hover:before,
+  .mobile-nav__item a:focus:before,
+  .mobile-nav__item a.active:before {
+    max-width: 10rem;
+  }
+
+  .my-icons {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .my-icons li {
+    list-style: none;
+    transition: 0.7s ease-in-out;
+  }
+
+  .my-icons li a {
+    font-size: 32px;
+    color: #ff5858;
+  }
+
+  .my-icons li:hover {
+    transform: scale(0.9);
+  }
+
+  @media (max-width: 768px) {
+    .mobile-nav {
+      width: 90%;
+    }
+    .mobile-nav__item a {
+      letter-spacing: 2px;
+      font-size: 22px;
+    }
+  }
+
+  nav ul li:hover ~ .cursor2.nav {
+    transform: scale(6);
+  }
+</style>

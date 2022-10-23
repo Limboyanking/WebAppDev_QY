@@ -294,22 +294,22 @@ gsap.from(".project-links.og", {
   }
 });
 
-gsap.from(".project-section h2", {
+gsap.from(".projects h2", {
   y: 800,
   stagger: 1,
   scrollTrigger: {
-    trigger: ".project-section h2",
+    trigger: ".projects h2",
     scrub: 1,
     start: 1300,
     end: 1400
   }
 });
 
-gsap.from(".project-section .title-container p", {
+gsap.from(".projects .title-container p", {
   y: 200,
   stagger: 1,
   scrollTrigger: {
-    trigger: ".project-section .title-container p",
+    trigger: ".projects .title-container p",
     scrub: 1,
     start: 1400,
     end: 1500

@@ -16,7 +16,7 @@
   }
 
   main
-    .project-section
+    .projects
     .container
     .project-container
     .project:nth-of-type(even) {
@@ -59,23 +59,23 @@
     font-size: 1rem;
   }
   /* PROJECT */
-  main .project-section .container .project-container .project {
+  main .projects .container .project-container .project {
     flex-direction: column;
   }
-  main .project-section .container .title-container h2 {
+  main .projects .container .title-container h2 {
     font-size: 1.5rem;
   }
-  main .project-section .container .title-container p {
+  main .projects .container .title-container p {
     font-size: 1rem;
   }
 
-  main .project-section .container .project-container .project-image {
+  main .projects .container .project-container .project-image {
     width: 100%;
   }
-  main .project-section .container .project-content-container {
+  main .projects .container .project-content-container {
     width: 100%;
   }
-  main .project-section .container .project-content-container .project-content {
+  main .projects .container .project-content-container .project-content {
     padding: 2rem;
   }
   .project-content-container .project-content .project-title {

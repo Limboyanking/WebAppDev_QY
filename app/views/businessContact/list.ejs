@@ -1,0 +1,54 @@
+<!--
+ Name: Qi Yang  
+ StudentID: 301313468     
+ Date: 2022/10/22
+
+-->
+
+<%- include ('../partials/inv_header') %>
+<!-- <%= businessContactList %> -->
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="row">
+        <h1><%= title %></h1>
+        <br>
+        <div>
+            <a href="/businessContact/add" class="btn btn-primary align-self-end" role="button">                
+                <i class="fa-solid fa-square-plus"></i>
+                Add a new Item
+            </a>                
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row-->
+                <tr>
+                    <th class="text-center">Contact Name</th>
+                    <th class="text-center">Contact Number</th>
+                    <th class="text-center">Email Address</th>
+                    <th class="text-center" colspan="2">Actions</th>
+                </tr>
+
+                <!-- Repeatable Template Row -->
+
+                <% for(let i = 0; i < businessContactList.length; i++) { %>
+                    <tr>
+                        <td class="text-center"><%= businessContactList[i].contactName %></td>
+                        <td class="text-center"><%= businessContactList[i].contactNumber %></td>
+                        <td class="text-center"><%= businessContactList[i].emailAddress %></td>
+                        <td class="text-center">
+                            <a href="/businessContact/edit/<%= businessContactList[i]._id %>" class="btn btn-primary btn-sm">
+                            <i class="fas fa-pencil-alt"></i></a>
+                        </td>
+                        <td class="text-center">
+                            <a href="/businessContact/delete/<%= businessContactList[i]._id %>" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+  </main>
+<%- include ('../partials/inv_footer') %>

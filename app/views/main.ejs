@@ -1,0 +1,411 @@
+<!--
+ Name: Qi Yang  
+ StudentID: 301313468     
+ Date: 2022/10/22
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <%-include('partials/head.ejs') %>
+
+  <body style="overflow: scroll">
+    <%-include('partials/navigation.ejs') %>
+
+    <div class="backdrop"></div>
+    <!-- OVERYLAY -->
+    <!-- <section class="text">
+      <h1>
+        <span data-char="E">E</span>
+        <span data-char=".">R</span>
+        <span data-char="I">I</span>
+        <span data-char=".">C</span>
+
+        <span data-char="Q">Q</span>
+        <span data-char=".">I</span>
+        <span data-char="Y">Y</span>
+        <span data-char=".">A</span>
+        <span data-char="N">N</span>
+        <span data-char=".">G</span>
+        <span data-char="A">A</span>
+        <span data-char=".">N</span>
+      </h1>
+      <div class="preloader">
+        <div class="overlay first"></div>
+        <div class="overlay second"></div>
+        <div class="overlay third"></div>
+      </div> 
+    </section> -->
+
+    <div class="homepage">
+      <div class="fixed-header animate-background">
+        <div class="container header-container">
+          <div class="logo-container">
+            <span class="logo animate-logo">Qi Yang</span>
+          </div>
+          <div class="header-text">
+            <h1>
+              <p>
+                Enthusiastic
+                <span class="auto-type"></span>
+              </p>
+              <p class="animate-text-2">Front end beginner</p> 
+            </h1>
+            <div class="cursor main"></div>
+            <div class="cursor2 main"></div>
+          </div>
+          <h2 class="animate-subtitle">
+            Have been writing scala since 2018 with a focus on
+            software design, distributed system and computing.
+          </h2>
+          <div class="scroll-button animate-scroll">
+            <div class="arrow">↓</div>
+            <a href="#section" style="color: black">scroll</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="section">
+      <header>
+        <p><a href="/home">QI</a></p>
+        <nav>
+          <!-- planing to further the content in /projects and /services -->
+          <ul class="nav-links">
+            <li><a class="link" href="#about">about</a></li>
+            <li><a class="link" href="#projects">projects</a></li>
+            <li><a class="link" href="#services">services</a></li>
+            <li><a class="link" href="#contact">contact</a></li>
+            <li><a class="link" href="/businessContact/list">businessContact</a></li>
+            <li><a class="link" href="/users">users</a></li>
+            <li><a class="link" href="/users/login">login</a></li>
+          </ul>
+        </nav>
+        <div class="nav-controls">
+          <button class="hamburger hamburger--spin" id="menu-btn" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+      </header>
+
+      <section id="about" class="ogg-container">
+        <div class="ogg">
+          <p>Hello</p>
+          <p>I'm Qi</p>
+          <p>Yang</p>
+        </div>
+
+        <section class="intro_section">
+          <div class="intro_subtitle">
+            <p class="first-para">
+              I'm an enthusiastic Scala Developer and life-long
+              learner from Mainland China.
+            </p>
+            <p class="second-para">
+              I've been
+              <span class="highlight">writing scala since 2018</span>
+              with a focus on software design, distributed system and computing.
+            </p>
+            <p class="third-para">
+              I am a
+              <span class="highlight">student and a trader</span>
+              during the day and a spare time
+              <span class="highlight">programmer</span> every other time.
+              You can always catch me either talking trading or building with
+              programming.
+            </p>
+          </div>
+
+          <div class="project-links center og">
+            <a href="/img/Profile.pdf" target="_blank" class="link-btn"
+              >more about me</a
+            >
+          </div>
+        </section>
+      </section>
+
+      <main class="main" id="main">
+        
+        <section class="projects" id="projects">
+          <div class="container">
+            <div class="title-container">
+              <h2>Featured Projects 💻</h2>
+              <p>
+                I prefer working under contract but I tend to freelance 
+                or make projects for fun. Here are some of my
+                recent projects:
+              </p>
+            </div>
+            <div class="project-container">
+              <div class="project">
+                <div class="project-image">
+                  <img
+                    src="/img/projects/scala-spark.jpg"
+                    height="340"
+                    width="720"
+                    alt="doteightplus"
+                  />
+                </div>
+                <div class="project-content-container">
+                  <div class="project-content">
+                    <h3 class="project-title">
+                      <a
+                        href="https://github.com/Limboyanking/mixedScalaJavaPOM"
+                        target="_blank"
+                        >RDD Ops Extension</a
+                      >
+                    </h3>
+
+                    <div class="project-description">
+                      <p>
+                        I built this implicit extension to improve 
+                        my understanding towards Spark layout 
+                        and improve the effeciency both in programming and stagging.
+                      </p>
+                    </div>
+
+                    <ul class="project-tags">
+                      <li class="tag">SPARK</li>
+                      <li class="tag">SCALA</li>
+                      <li class="tag">JAVA</li>
+                      <li class="tag">YARN</li>
+                    </ul>
+
+                    <div class="project-links">
+                      <a
+                        href="https://github.com/Limboyanking/mixedScalaJavaPOM"
+                        target="_blank"
+                        class="link-btn"
+                        >visit site</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="wave-border">
+          <svg
+            viewBox="0 0 500 150"
+            preserveAspectRatio="none"
+            style="height: 100%; width: 100%"
+          >
+            <path
+              d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+              style="stroke: none; fill: var(--shade-100)"
+            ></path>
+            <path
+              class="neon-path"
+              d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98"
+              style="stroke: var(--neon-color); fill: none"
+            ></path>
+          </svg>
+        </div>
+
+        <section class="services" id="services">
+          <div class="container">
+            <div class="title-container scroll-in js-opacity scrolled">
+              <h2 class="section-title">
+                Featured Services <span class="title-icon">🗒</span>
+              </h2>
+              <p class="section-subtitle">
+                I like several languages above JVM, DBs, and message queues, 
+                would like to understand new concept along with the new tools or technologies.
+                Here are things I've tasted:
+              </p>
+            </div>
+            <div class="services-container">
+
+              <div class="service-card">
+                <div class="service scroll-in js-opacity scrolled">
+                  <div class="service-image">
+                    <a
+                      href="https://www.databricks.com/glossary/what-is-spark-streaming#:~:text=Spark%20Streaming%20is%20an%20extension,%2C%20databases%2C%20and%20live%20dashboards."
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <img
+                        src="/img/services/spark_streaming_logo.png"
+                        alt="Spark Streaming"
+                      />
+                    </a>
+                  </div>
+                  <div class="service-content">
+                    <div class="service-site">
+                      MEDIUM
+                    </div>
+                    <h3 class="service-title">
+                      <a
+                        href="https://www.databricks.com/glossary/what-is-spark-streaming#:~:text=Spark%20Streaming%20is%20an%20extension,%2C%20databases%2C%20and%20live%20dashboards."
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        Spark Streaming
+                      </a>
+                    </h3>
+                    <div class="service-description">
+                      <p>
+                        Able to analyse and apply the mesh of realtime data stream and bussiness rules
+                        by either spark streaming SQL or regular spark packages.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="service-card">
+                <div class="service scroll-in js-opacity scrolled">
+                  <div class="service-image">
+                    <a
+                      href="https://www.playframework.com/"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <img
+                        src="/img/services/play-akka.png"
+                        alt="play-akka"
+                      />
+                    </a>
+                  </div>
+                  <div class="service-content">
+                    <div class="service-site">
+                      SUB-INTERMEDATE 
+                    </div>
+                    <h3 class="service-title">
+                      <a
+                        href="https://www.playframework.com/"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        Play and Akka
+                      </a>
+                    </h3>
+                    <div class="service-description">
+                      <p>
+                        Able to apply and organise web logic conveniently 
+                        in a combination of functional and object-oriented style. 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="service-card">
+                <div class="service scroll-in js-opacity scrolled">
+                  <div class="service-image">
+                    <a
+                      href="https://hbase.apache.org/"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <img
+                        src="/img/services/hbase-logo.png"
+                        alt="hbase-logo"
+                      />
+                    </a>
+                  </div>
+                  <div class="service-content">
+                    <div class="service-site">
+                      SUB-INTERMEDATE
+                    </div>
+                    <h3 class="service-title">
+                      <a
+                        href="https://hbase.apache.org/" 
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        HBase
+                      </a>
+                    </h3>
+                    <div class="service-description">
+                      <p>
+                        Able to design and apply logic under NoSQL context.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-links center">
+              <a href="services" class="link-btn">View All Services</a>
+            </div>
+          </div>
+        </section>       
+        
+
+        <section class="contact" id="contact">
+          <div class="container">
+            <div class="contact-container">
+              <div class="paragraph">
+                <p>Got an interesting project? I can help you.</p>
+              </div>
+
+              <hr />
+
+              <div class="connect">
+                <p class="first">connect with me</p>
+                <p>https://instagram.com/limbo_yanking?r=nametag</p>
+              </div>
+
+              <div class="follow">
+                <p class="first">follow me</p>
+                <ul>
+                  <li><span class="gh"></span> <a href="#">gh</a></li>
+                  <li><span class="me"></span> <a href="#">me</a></li>
+                  <li><span class="li"></span> <a href="#">li</a></li>
+                  <li><span class="tw"></span> <a href="#">tw</a></li>
+                </ul>
+              </div>
+
+              <div class="hello">
+                <p class="first">say hello</p>
+                <div class="email">yanking3156@gmail.com</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+      </main>
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script src="/js/main.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
+    <!-- GSAP ANIMATION -->
+    <script src="/js/gsap.js"></script>
+
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const sideDrawer = document.querySelector(".mobile-nav");
+      const backdrop = document.querySelector(".backdrop");
+
+      function backdropClickHandler() {
+        btn.classList.remove("active");
+        backdrop.classList.toggle("blur");
+        sideDrawer.classList.remove("open");
+      }
+
+      btn.addEventListener("click", () => {
+        console.log("clicked");
+        btn.classList.toggle("active");
+        // backdrop.style.display = "block";
+        backdrop.classList.toggle("blur");
+        sideDrawer.classList.toggle("open");
+      });
+
+      backdrop.addEventListener("click", backdropClickHandler);
+    </script>
+  </body>
+</html>

@@ -1,31 +1,109 @@
 /**
  * Name: Qi Yang  
  * StudentID: 301313468     
- * Date: 2022/10/1
+ * Date: 2022/10/22
  */
 
-const express = require("express");
-const ejs = require("ejs");
-const path = require("path");
-const router = require("./app/routes/home");
-const app = express();
-const PORT = process.env.PORT || 3000;
+/**
+ * Module dependencies.
+ */
 
-app.set("view engine", "ejs");
-app.set("views", "./public/views");
-app.set("port", PORT);
+ var dbConfig = require('./app/config/db');
+ var app = require('./app/config/app');
+ var debug = require('debug')('localhost:3000');
+ var http = require('http');
+ const configurePassport = require('./app/config/passport');
+ 
+ /**
+  * Get port from environment and store in Express.
+  */
+ 
+ var db = dbConfig();
+ var port = normalizePort(process.env.PORT || '3000');
+ app.set('port', port);
+ 
+// app.use((req, res) => {
+//   res.status(404).render("404", { pageTitle: "Page not found" });
+// });
+
+// app.listen(app.get("port"), () => {
+//   console.log("Server is listening on " + PORT);
+// });
 
 
-app.use(express.static("public"));
-// app.get("/public", express.static("public"));
-
-app.use("/", router);
-
-
-app.use((req, res) => {
-  res.status(404).render("404", { pageTitle: "Page not found" });
-});
-
-app.listen(app.get("port"), () => {
-  console.log("Server is listening...");
-});
+ /**
+  * Create HTTP server.
+  */
+ 
+ var server = http.createServer(app);
+ 
+ /**
+  * Listen on provided port, on all network interfaces.
+  */
+ 
+ const passport = configurePassport();
+ server.listen(port);
+ server.on('error', onError);
+ server.on('listening', onListening);
+ 
+ /**
+  * Normalize a port into a number, string, or false.
+  */
+ 
+ function normalizePort(val) {
+   var port = parseInt(val, 10);
+ 
+   if (isNaN(port)) {
+     // named pipe
+     return val;
+   }
+ 
+   if (port >= 0) {
+     // port number
+     return port;
+   }
+ 
+   return false;
+ }
+ 
+ /**
+  * Event listener for HTTP server "error" event.
+  */
+ 
+ function onError(error) {
+   if (error.syscall !== 'listen') {
+     throw error;
+   }
+ 
+   var bind = typeof port === 'string'
+     ? 'Pipe ' + port
+     : 'Port ' + port;
+ 
+   // handle specific listen errors with friendly messages
+   switch (error.code) {
+     case 'EACCES':
+       console.error(bind + ' requires elevated privileges');
+       process.exit(1);
+       break;
+     case 'EADDRINUSE':
+       console.error(bind + ' is already in use');
+       process.exit(1);
+       break;
+     default:
+       throw error;
+   }
+ }
+ 
+ /**
+  * Event listener for HTTP server "listening" event.
+  */
+ 
+ function onListening() {
+   var addr = server.address();
+   var bind = typeof addr === 'string'
+     ? 'pipe ' + addr
+     : 'port ' + addr.port;
+   debug('Listening on ' + bind);
+   console.log(`App listening on  http://localhost:${port}`)
+ }
+ 

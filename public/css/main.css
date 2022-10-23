@@ -906,7 +906,7 @@ header .nav-controls {
   color: #000;
 }
 
-/* // PROJECT-SECTION */
+/* // PROJECTS */
 .link-btn {
   display: inline-block;
   border: 2px solid var(--grey-color);
@@ -928,26 +928,26 @@ section:nth-of-type(even) {
   background-color: var(--shade-100);
 }
 
-main .project-section .container .title-container h2 {
+main .projects .container .title-container h2 {
   margin-bottom: 1rem;
   font-size: 2.5rem;
   font-weight: 600;
   color: var(--shade-500);
 }
-main .project-section .container .title-container p {
+main .projects .container .title-container p {
   font-size: 1.5rem;
   color: var(--grey-text);
   max-width: 60ch;
 }
 
-main .project-section .container .project-container {
+main .projects .container .project-container {
   margin: 4em 0;
 }
-main .project-section .container .project-container .project:nth-of-type(even) {
+main .projects .container .project-container .project:nth-of-type(even) {
   flex-direction: row-reverse;
 }
 
-main .project-section .container .project-container .project {
+main .projects .container .project-container .project {
   display: flex;
   justify-content: space-between;
   padding: 5rem 0;
@@ -955,11 +955,11 @@ main .project-section .container .project-container .project {
   border-bottom: 1px dashed var(--shade-300);
 }
 
-main .project-section .container .project-container .project-image {
+main .projects .container .project-container .project-image {
   width: 50%;
 }
 
-main .project-section .container .project-container .project-image img {
+main .projects .container .project-container .project-image img {
   display: block;
   width: 100%;
   height: auto;
@@ -970,16 +970,16 @@ main .project-section .container .project-container .project-image img {
   transition: filter 1s;
 }
 
-main .project-section .container .project-container .project:hover img {
+main .projects .container .project-container .project:hover img {
   opacity: 1;
   filter: brightness(100%) grayscale(0);
 }
 
-main .project-section .container .project-content-container {
+main .projects .container .project-content-container {
   width: 50%;
 }
 
-main .project-section .container .project-content-container .project-content {
+main .projects .container .project-content-container .project-content {
   display: flex;
   flex-direction: column;
   justify-content: center;

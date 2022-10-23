@@ -1,39 +1,32 @@
 /**
  * Name: Qi Yang  
  * StudentID: 301313468     
- * Date: 2022/10/1
+ * Date: 2022/10/22
  */
 
-const express = require("express");
-const path = require("path");
-const router = express.Router();
+var express = require('express');
+var router = express.Router();
+let controlerIndex = require('../controllers/home');
 
-router.get("/", (req, res) => {
-  res.render("home", { path: "/", pageTitle: "Portfolio " });
-});
+/* GET home page. */
+router.get('/', controlerIndex.home);
 
-router.get("/home", (req, res) => {
-  res.render("home", { path: "/", pageTitle: "Portfolio " });
-});
+/* GET home page. */
+router.get('/home', controlerIndex.home);
 
-router.get("/main", (req, res) => {
-  res.render("main", { path: "/main", pageTitle: "Qi Yang" });
-});
+/* GET main page. */
+router.get('/main', controlerIndex.main);
 
-router.get("/about", (req, res) => {
-  res.render("about", { path: "/about", pageTitle: "About me" });
-});
+/* GET About page. */
+router.get('/about', controlerIndex.about);
 
-router.get("/projects", (req, res) => {
-  res.render("projects", { path: "/projects", pageTitle: "My projects" });
-});
+/* GET Projects page. */
+router.get('/projects', controlerIndex.projects);
 
-router.get("/services", (req, res) => {
-  res.render("services", { path: "/services", pageTitle: "My services" });
-});
+/* GET Services page. */
+router.get('/services', controlerIndex.services);
 
-router.get("/contact", (req, res) => {
-  res.render("contact", { path: "/contact", pageTitle: "Contact me" });
-});
+/* GET Services page. */
+router.get('/contact', controlerIndex.contact);
 
 module.exports = router;
